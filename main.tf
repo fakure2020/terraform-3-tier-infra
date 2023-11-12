@@ -1,4 +1,4 @@
-module "vpc" {
+ module "vpc" {
   source = "./vpc"
   tags = local.project_tags
     
@@ -13,4 +13,40 @@ module "rds" {
   vpc_cidr = "10.0.0.0/16"
 
 }
+
+
+module "ec2" {
+  source  = "./ec2"
+  instance_type = "t2.micro"
+  vpc_id = module.vpc.vpc_id
+  public_subnet1 = module.vpc.public_subnet1_id
+  tags = local.project_tags
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
