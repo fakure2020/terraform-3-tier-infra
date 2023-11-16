@@ -1,3 +1,4 @@
+# this is the assignment from class 
 variable "instance_ami" {
   type = string
   description = "ami_id"

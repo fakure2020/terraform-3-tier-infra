@@ -1,3 +1,4 @@
+# this is the assignment from class 
 output "instance_id" {
     value = aws_instance.app.id
 }
